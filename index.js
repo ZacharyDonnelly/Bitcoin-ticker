@@ -4,12 +4,19 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use('/styles.css', express.static(__dirname + '/styles.css'));
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
 app.get("/", function(req, res) {
-    res.send(__dirname + "index.html");
+    res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", function(req, res) {
+
+    console.log(req.body.crypto);
 });
 
 app.listen(3000, function() {
