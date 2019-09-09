@@ -8,32 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="https://kit.fontawesome.com/1f66f347e9.js"></script>
 </head>
 
 <body>
-    <h1 class="big-header">Bitcoin Ticker</h1>
+    <div class="header">
+        <h1 class="fab fa-bitcoin fa-2x">Bitcoin Ticker</h1>
+    </div>
+    <div class="options">
+        <form action="/" method="post">
 
-    <form action="/" method="post">
+            <input type="text" name="amount" placeholder="Quantity">
 
-        <input type="text" name="amount" placeholder="Quantity">
+            <select name="crypto">
+                <option value="BTC">Bitcoin</option>
+                <option value="ETH">Ethereum</option>
+                <option value="LTC">Litecoin</option>
+            </select>
+            <select name="fiat">
+                <option value="USD">US Dollars</option>
+                <option value="GBP">GB Pounds</option>
+                <option value="EUR">EU Euros</option>
+            </select>
 
-        <select name="crypto">
-            <option value="BTC">Bitcoin</option>
-            <option value="ETH">Ethereum</option>
-            <option value="LTC">Litecoin</option>
-        </select>
-        <select name="fiat">
-            <option value="USD">US Dollars</option>
-            <option value="GBP">GB Pounds</option>
-            <option value="EUR">EU Euros</option>
-        </select>
-
-        <button type="submit" name="check">Check</button>
-
-
-
-
+            <button type="submit" name="check">Check</button>
+    </div>
     </form>
+    <footer>Copyright &copy 2019</footer>
 
     <script src="index.js"></script>
 </body>
